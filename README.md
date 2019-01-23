@@ -1,5 +1,7 @@
 # Exercise 2: Bottlenecks
 
+## Hei folkens! Jeg er dessverre blitt syk og kommer nok ikke på fredag, men jeg har jobbet en del med oppgavene. Lykke til! Mvh Stine
+
 ## Parts
 - [Part 1: Some theory](./Part1/README.md) 
 - [Part 2: Avoiding data races](./Part2/README.md) 
