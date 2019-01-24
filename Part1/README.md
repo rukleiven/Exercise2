@@ -36,9 +36,9 @@ A Mutex (Mutual Exclution) is similar to binary semaphore, but additionally has 
 
 ### List some advantages of using message passing over lock-based synchronization primitives.
 > - Increase the scalability of the program
-  - Easier to avoid concurrency bugs
+> - Easier to avoid concurrency bugs
 
 
 ### List some advantages of using lock-based synchronization primitives over message passing.
 > - The program alogrithm tends to be simpler.
-  - 
+> - 
