@@ -1,42 +1,44 @@
 # Mutex and Channel basics
 
 ### What is an atomic operation?
-> En atomisk operasjon i concurrent programmering er en operasjon som kjører fullt uavhengig av noen annen prosess. Dette blir mye brukt i moderne operativsystemer og i parallelle prosesssystemer.
-
-> Kilde: https://www.techopedia.com/definition/3466/atomic-operation
+> An atomic operation is an indivisible operation that completes in a single step relative to other threads. In other words, when a thread performs an atomic operation, other threads see an instantaneous change. 
 
 ### What is a semaphore?
-> En Semaphore er en spesiel variabel som kontrollerer tilgangen til en felles resurs. Kan tenkes på som en dørvakt på et utested - hvis det er full kapasitet blir du stoppet og må vente til noen andre drar.
+> A semaphore is a variable used to control a common resource by multiple processes in a concurrent system. It is used to acheive process synchronization. (Kan tenkes på som en dørvakt på et utested - hvis det er full kapasitet blir du stoppet og må vente til noen andre drar.)
 
-Vi skiller mellom counting semaphores og binary semaphores, hvor sistnevnte er begrenset til verdien 0 eller 1.
+We distinguish between counting semaphore and binary semaphore, where the latter is limited to 0's or 1's.
 
 > Kilder: https://en.wikipedia.org/wiki/Semaphore_(programming) og https://barrgroup.com/Embedded-Systems/How-To/RTOS-Mutex-Semaphore
 
 
 ### What is a mutex?
-> En Mutex (Mutual Exclution) er lik binær semaphore, men har i tillegg egenskapen ownership, som vil si at kun den som opptar resursen kan gjøre den tilgjengelig igjen.
+> 
+A Mutex (Mutual Exclution) is similar to binary semaphore, but additionally has the property of ownership, ie. only the one who occupies the resource can make it available again.
 
 > Kilde: fra forelesningsnotater
 
 
 ### What is the difference between a mutex and a binary semaphore?
-> se svar ovenfor. 
+> Answered above. 
 
 ### What is a critical section?
-> En kritisk seksjon en beskyttet seksjon i et dataprogram som bare kan utføres av en enkelt prosess av gangen. Problemet er aktuelt innenfor parallelle beregninger hvor en delt ressurs kan føre til uventet eller feilaktig adferd, hvis den ikke blir beskyttet
+> A critical section is the part of the program that uses shared resources. This means that the only time a process can create race contitions is if it is in a critical section. We can therefore avoid race conditions by making sure that to processes never enter their critical sections at the same time. 
 
 > Kilde: https://en.wikipedia.org/wiki/Critical_section
 
 ### What is the difference between race conditions and data races?
- > Race condition er en feil som oppstår som følge av at timing eller rekkefølge av prosesser påvirker resultatet av programmet.
+ > Race condition is an error that occurs as a result of timing or sequence of processes affecting the outcome of the program.
+
  
- > Data race er en feil som oppstår som følge av at en minnelokasjon blir gjort tilgjengelig for to tråder som kjører cocurrent (som ikke er read only)
- 
- > Kilde: https://blog.regehr.org/archives/490
+ > Data race is an error that occurs when to threads access the same memory location at the same time, and at least one of the threads modifies the data. 
+
+> Kilde: https://blog.regehr.org/archives/490
 
 ### List some advantages of using message passing over lock-based synchronization primitives.
-> Usikkert svar: Raskere kommunikasjon
+> - Increase the scalability of the program
+  - Easier to avoid concurrency bugs
 
 
 ### List some advantages of using lock-based synchronization primitives over message passing.
-> Usikkert svar: Unngår tap av data
+> - The program alogrithm tends to be simpler.
+  - 
