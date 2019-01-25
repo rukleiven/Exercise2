@@ -40,4 +40,4 @@ We distinguish between counting semaphore and binary semaphore, where the latter
 
 ### List some advantages of using lock-based synchronization primitives over message passing.
 > - The program alogrithm tends to be simpler.
-> - 
+> - You don't need to take into account an other user, as there is no communication between two users.
