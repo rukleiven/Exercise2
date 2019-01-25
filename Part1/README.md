@@ -12,8 +12,7 @@ We distinguish between counting semaphore and binary semaphore, where the latter
 
 
 ### What is a mutex?
-> 
-A Mutex (Mutual Exclution) is similar to binary semaphore, but additionally has the property of ownership, ie. only the one who occupies the resource can make it available again.
+> A Mutex (Mutual Exclution) is similar to binary semaphore, but additionally has the property of ownership, ie. only the one who occupies the resource can make it available again.
 
 > Kilde: fra forelesningsnotater
 
